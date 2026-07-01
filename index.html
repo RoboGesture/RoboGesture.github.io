@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction">
+  <meta name="keywords" content="RoboGesture, Co-Speech Gesture, Humanoid, Human-Robot Interaction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-size: 46px; margin-bottom: 20px;">RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction</h1>
+          <div class="publication-authors" style="font-size: 17px;">
+            <span class="author-block">Zifan Wang<sup>*1,2</sup>,</span>
+            <span class="author-block">Ziang Ren<sup>*2,3</sup>,</span>
+            <span class="author-block">Pengyang Shi<sup>*1,2</sup>,</span>
+            <span class="author-block">Zirui Wang<sup>4</sup>,</span>
+            <span class="author-block">Chenghuai Lin<sup>2</sup>,</span>
+            <span class="author-block">Tianze Wang<sup>2</sup>,</span>
+            <span class="author-block">Zekun Qi<sup>1,2</sup>,</span>
+            <span class="author-block">Liangliang Zhao<sup>4</sup>,</span>
+            <span class="author-block">He Wang<sup>2,5</sup>,</span>
+            <span class="author-block">Li Yi<sup>&#9993;1,2,6</sup></span>
+          </div>
+
+          <div class="publication-authors" style="font-size: 15px; margin-top: 4px;">
+            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>Galbot,</span>
+            <span class="author-block"><sup>3</sup>Beijing Institute of Technology,</span>
+            <span class="author-block"><sup>4</sup>Harbin Institute of Technology,</span>
+            <span class="author-block"><sup>5</sup>Peking University,</span>
+            <span class="author-block"><sup>6</sup>Shanghai Qi Zhi Institute</span>
+          </div>
+
+          <div class="is-size-6 publication-authors" style="margin-top: 6px;">
+            <span class="author-block"><sup>*</sup>Equal contribution.&nbsp;&nbsp;<sup>&#9993;</sup>Corresponding author.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser figure -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" alt="RoboGesture teaser" style="width: 100%;"/>
+      <h2 class="subtitle has-text-centered" style="font-size: 16px; margin-top: 12px;">
+        <b>RoboGesture</b> generates expressive, semantically-aligned, and safety-aware co-speech gestures for
+        humanoid robots from streaming speech, enabling robots to listen, respond, and gesture coherently in
+        real-time social interaction.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- Real-world videos: two columns -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+
+        <!-- Co-Speech Gesture Generation column -->
+        <div class="column is-half">
+          <h3 class="title is-4 has-text-centered">Co-Speech Gesture Generation</h3>
+          <div class="content has-text-centered">
+            <video id="rw1" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 12px;">
+              <source src="./static/videos/cospeech_1.mp4" type="video/mp4">
+            </video>
+            <video id="rw2" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 12px;">
+              <source src="./static/videos/cospeech_2.mp4" type="video/mp4">
+            </video>
+            <video id="rw3" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/cospeech_3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- Social Interaction column -->
+        <div class="column is-half">
+          <h3 class="title is-4 has-text-centered">Social Interaction</h3>
+          <div class="content has-text-centered">
+            <video id="rw4" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 12px;">
+              <source src="./static/videos/social_1.mp4" type="video/mp4">
+            </video>
+            <video id="rw5" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 12px;">
+              <source src="./static/videos/social_2.mp4" type="video/mp4">
+            </video>
+            <video id="rw6" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/social_3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Enabling humanoid robots to respond to human speech with synchronized and semantically meaningful
+            gestures is fundamental to natural human-robot interaction. However, this task faces three critical
+            barriers: the scarcity of semantically rich datasets, the <i>"modality eclipse"</i> where models ignore
+            audio cues in favor of kinematic inertia, and the sim-to-real gap regarding physical safety. We propose
+            <b>RoboGesture</b>, a robot-centric framework that co-designs data, modeling, and control to power a
+            complete interactive human&ndash;humanoid system in which the robot listens, responds, and gestures in
+            real time.
+          </p>
+          <p>
+            We first establish the <b>RoboGesture dataset</b> featuring over 300 gesture categories and develop an
+            automated pipeline to synthesize large-scale collision-free, robot-specific audio-motion pairs. Our
+            architecture features a <b>Hierarchical Semantic-Acoustic Aligner</b> that extracts multi-granular
+            prosodic and semantic cues directly from raw audio tokens. These cues drive a <b>Streaming Conditional
+            Motion Generator</b> based on a diffusion transformer with conditional flow matching. To ensure high
+            responsiveness, we introduce <b>Anti-Inertia CFG Masking</b>, which prevents the model from collapsing
+            into repetitive historical patterns by compelling it to proactively mine control signals from the audio
+            modality. Finally, an MPC-based safety filter ensures real-time, collision-free execution on physical
+            hardware. Experiments on a Unitree G1 humanoid demonstrate that RoboGesture generates safer, more
+            rhythmic, and more semantically appropriate responses compared to state-of-the-art baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <!-- TODO: Replace YOUTUBE_VIDEO_ID with the RoboGesture YouTube video id once uploaded. -->
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            RoboGesture is a robot-centric, data&ndash;model co-designed framework that operates in a
+            <b>streaming-to-streaming</b> paradigm: it processes incoming audio chunks and generates corresponding
+            motions in real time. For the physical embodiment, we employ the <b>Unitree G1</b> humanoid integrated
+            with <b>BrainCo</b> dexterous hands, with a kinematic state space of 41 DoFs (17 for the upper torso and
+            arms, 24 for the dexterous hands). The framework consists of three core modules: (i) a Hierarchical
+            Semantic-Acoustic Aligner, (ii) a Streaming Conditional Motion Generator, and (iii) an MPC-based
+            kinematic safety filter.
+          </p>
+        </div>
+
+        <img src="./static/images/pipeline.png"
+             class="interpolation-image"
+             alt="RoboGesture pipeline."/>
+        <p class="has-text-centered" style="font-size: 14px; margin-top: 10px; margin-bottom: 40px;">
+          <b>Overview of RoboGesture.</b> (a) The Semantic-Acoustic Aligner decouples multi-granular audio cues from
+          streaming tokens. (b) The Motion Generator synthesizes motion via Conditional Flow Matching, jointly
+          conditioned on hierarchical audio features and historical motion. (c) At inference, the pipeline integrates
+          with upstream Speech-LLMs and a safety filter to drive physical robots in real time.
+        </p>
+
+        <h3 class="title is-4">Hierarchical Semantic-Acoustic Aligner</h3>
+        <div class="content has-text-justified">
+          <p>
+            Text-based methods inevitably lose vital prosodic information such as intonation and emphasis &mdash; the
+            word <i>"Really"</i> conveys skepticism with a rising intonation but confirmation with a falling one.
+            To capture these nuances, we tokenize streaming audio with the <b>Mimi codec</b> and process the
+            multi-granular tokens through a transformer-based aligner trained via multi-task auxiliary learning.
+          </p>
+          <p>
+            Shallow layers capture rapid acoustic energy transients and are routed to a <b>beat head</b> for
+            rhythmic supervision, ensuring motion stays synchronized with acoustic onsets. Deep layers distill
+            macroscopic semantics through a <b>300-class</b> classification task powered by the RoboGesture dataset,
+            acting as an information bottleneck. The resulting low-level rhythmic pulses and high-level semantic
+            labels work in tandem to guide the downstream motion generator.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Streaming Conditional Motion Generator</h3>
+        <div class="content has-text-justified">
+          <p>
+            Operating directly in the continuous kinematic state space, a <b>Diffusion Transformer (DiT)</b> with
+            <b>Conditional Flow Matching</b> predicts the velocity field of future motion chunks for low-latency,
+            high-fidelity streaming. To overcome the <b>modality eclipse</b> &mdash; where the model lazily relies on
+            past kinematic inertia rather than audio &mdash; we adopt a two-stage training strategy with
+            <b>Anti-Inertia CFG Masking</b> that randomly masks historical context, compelling the model to
+            proactively mine control signals from audio. Inside the DiT, Cross-Attention provides frame-level
+            alignment while FiLM injects global semantic modulation.
+          </p>
+        </div>
+
+        <h3 class="title is-4">MPC-based Safety Filter</h3>
+        <div class="content has-text-justified">
+          <p>
+            For real-time deployment, generated motion passes through an online <b>MPC filter</b> as a final safety
+            guard, formulated as convex quadratic programming with velocity regularization, tracking-error
+            minimization, and collision-avoidance constraints. The filter adds only <b>5.6 ms</b> per frame,
+            comfortably exceeding the 30 Hz robot control rate, and is also used offline to sanitize the entire
+            training corpus.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+
+
+    <!-- Dataset. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">RoboGesture Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            We build <b>RoboGesture</b>, a high-quality semantic gesture dataset for humanoid robots comprising over
+            <b><span style="color: #8a2be2;">300 gesture categories</span></b>. The class list is derived from SeG and
+            EgoGesture templates and expanded through user questionnaires. Each gesture is recorded with a
+            marker-based motion-capture system, manually annotated with detailed motion descriptions, retargeted and
+            optimized, then replayed on the physical robot to verify reachability and control fidelity.
+          </p>
+          <p>
+            Building on this, an <b>automatic semi-synthetic pipeline</b> generates millions of audio&ndash;motion
+            pairs through five stages: (1) <b>Scenario Generation</b> with LLMs, (2) <b>Gesture Tagging</b> to select
+            and place semantically appropriate gestures, (3) <b>Multimodal Synthesis</b> of emotion-aware TTS audio
+            with word-level timestamps and rhythmic beat gestures, (4) <b>Temporal Blending</b> where semantic
+            gestures begin 0.4s before their spoken keywords to mimic human anticipation, and (5) <b>Safety
+            Optimization</b> via collision-avoidance refinement.
+          </p>
+        </div>
+        <img src="./static/images/dataset.png"
+             class="interpolation-image"
+             alt="RoboGesture dataset."/>
+        <p class="has-text-centered" style="font-size: 14px; margin-top: 10px; margin-bottom: 30px;">
+          <b>Visualization of the RoboGesture Dataset.</b> RoboGesture refines SeG by correcting motion-penetration
+          issues, augments EgoGesture with full-body motion, and incorporates newly collected gestures. Each sample
+          is annotated with detailed semantic labels.
+        </p>
+      </div>
+    </div>
+    <!--/ Dataset. -->
+
+
+    <!-- Experiments. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+
+        <h3 class="title is-4">Co-Speech Gesture Generation</h3>
+        <div class="content has-text-justified">
+          <p>
+            On the <b>BEAT</b> and <b>SemanticBEAT</b> benchmarks, RoboGesture achieves state-of-the-art FGD, BC, and
+            MSE, indicating superior alignment with the ground-truth distribution and accurate structural
+            reconstruction, while ensuring strict physical plausibility with a near-zero collision rate
+            (<b>0.88% / 0.13%</b>).
+          </p>
+        </div>
+
+        <!-- Main quantitative table -->
+        <div class="content">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth has-text-centered"
+                 style="font-size: 13px;">
+            <thead>
+              <tr>
+                <th rowspan="2" style="vertical-align: middle;">Method</th>
+                <th colspan="5">BEAT</th>
+                <th colspan="3">SemanticBEAT</th>
+              </tr>
+              <tr>
+                <th>FGD &darr;</th><th>BC &uarr;</th><th>MSE &darr;</th><th>DIV &uarr;</th><th>Col. &darr;</th>
+                <th>BC &uarr;</th><th>DIV &uarr;</th><th>Col. &darr;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="has-text-left">LivelySpeaker <span style="color:#888;">(ICCV'23)</span></td>
+                <td>3.0350</td><td>0.1811</td><td>0.1861</td><td>0.1485</td><td>21.41</td>
+                <td>0.2852</td><td>0.1384</td><td>13.36</td>
+              </tr>
+              <tr>
+                <td class="has-text-left">DiffSHEG <span style="color:#888;">(CVPR'24)</span></td>
+                <td><u>2.2316</u></td><td><u>0.1851</u></td><td><u>0.1753</u></td><td>0.1218</td><td><b>0.85</b></td>
+                <td>0.2859</td><td>0.1209</td><td><u>1.20</u></td>
+              </tr>
+              <tr>
+                <td class="has-text-left">SemTalk <span style="color:#888;">(ICCV'25)</span></td>
+                <td>7.9328</td><td>0.1828</td><td>0.3931</td><td>0.1781</td><td>52.82</td>
+                <td><u>0.2913</u></td><td>0.1440</td><td>42.65</td>
+              </tr>
+              <tr>
+                <td class="has-text-left">Semantic Gesticulator <span style="color:#888;">(SIGGRAPH'24)</span></td>
+                <td>3.0147</td><td>0.1771</td><td>0.2375</td><td><b>0.2818</b></td><td>13.11</td>
+                <td>0.2906</td><td><b>0.2831</b></td><td>13.84</td>
+              </tr>
+              <tr style="background-color: #f0e9fb;">
+                <td class="has-text-left"><b>Ours</b></td>
+                <td><b>0.8452</b></td><td><b>0.1866</b></td><td><b>0.1347</b></td><td><u>0.2075</u></td><td><u>0.88</u></td>
+                <td><b>0.2950</b></td><td><u>0.2041</u></td><td><b>0.13</b></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="has-text-centered" style="font-size: 13px;">
+            Quantitative comparison on BEAT and SemanticBEAT. <b>Bold</b> = best, <u>underline</u> = second-best.
+          </p>
+        </div>
+
+        <img src="./static/images/compare.png"
+             class="interpolation-image"
+             alt="Qualitative comparison."
+             style="margin-top: 20px;"/>
+        <p class="has-text-centered" style="font-size: 14px; margin-top: 10px; margin-bottom: 40px;">
+          <b>Qualitative comparison of generated co-speech gestures.</b> <b>Left:</b> baselines occasionally suffer
+          severe self-penetration, whereas our model strictly avoids self-collisions. <b>Middle:</b> given the cue
+          <i>"OK"</i>, our model synthesizes the precise fine-grained hand gesture. <b>Right:</b> for emphatic speech
+          (<i>"seize the chance"</i>), our model generates highly expressive body language such as confidently
+          patting the chest.
+        </p>
+
+        <h3 class="title is-4">Simulation Comparison with Baselines</h3>
+        <div class="content has-text-justified">
+          <p>
+            Side-by-side comparisons of generated gestures highlight the superior semantic alignment, hand
+            articulation, and physical safety of our method against state-of-the-art baselines.
+          </p>
+        </div>
+        <div class="content has-text-centered" style="margin-bottom: 40px;">
+          <video id="sim1" autoplay controls muted loop playsinline width="48%" style="margin: 0 0.5%;">
+            <source src="./static/videos/compare_baseline_1.mp4" type="video/mp4">
+          </video>
+          <video id="sim2" autoplay controls muted loop playsinline width="48%" style="margin: 0 0.5%;">
+            <source src="./static/videos/compare_baseline_2.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <h3 class="title is-4">Real-world Social Interaction</h3>
+        <div class="content has-text-justified">
+          <p>
+            We instantiate a complete interactive human&ndash;humanoid system in which the robot listens, responds,
+            and gestures in real time. The deployed system comprises a language interaction module (ASR, a LoRA-tuned
+            LLM, and TTS), our streaming speech-to-motion module, and a robot execution module. The streaming motion
+            generator sustains <b>&asymp;120 FPS</b>, with total system latency dominated by the upstream speech
+            pipeline rather than our motion model. The carousel above shows real-world co-speech gesture generation
+            and social interaction on a Unitree G1 humanoid.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Experiments. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>@inproceedings{wang2026robogesture,
+  title={RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction},
+  author={Wang, Zifan and Ren, Ziang and Shi, Pengyang and Wang, Zirui and Lin, Chenghuai
+         and Wang, Tianze and Qi, Zekun and Zhao, Liangliang and Wang, He and Yi, Li},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- TODO: link the PDF once the submission is de-anonymized. -->
+      <span class="icon-link">
+        <i class="fas fa-file-pdf"></i>
+      </span>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The template is borrowed from <a rel="license"
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Match playback speed of supplementary / comparison videos as desired.
+  document.addEventListener('DOMContentLoaded', function () {
+    ['rw1','rw2','rw3','rw4','rw5','rw6','sim1','sim2'].forEach(function (id) {
+      var v = document.getElementById(id);
+      if (v) v.playbackRate = 1.0;
+    });
+  });
+</script>
+
+</body>
+</html>
