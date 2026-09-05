@@ -7,23 +7,20 @@
   <meta name="keywords" content="RoboGesture, Co-Speech Gesture, Humanoid, Human-Robot Interaction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction</title>
+  <link rel="canonical" href="https://robogesture.github.io/">
+  <meta property="og:title" content="RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction">
+  <meta property="og:description" content="A robot-centric framework for real-time, semantically aligned, and safety-aware humanoid co-speech gestures.">
+  <meta property="og:image" content="https://robogesture.github.io/static/images/teaser.png">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
 </head>
 <body>
 
@@ -49,7 +46,7 @@
 
           <div class="publication-authors" style="font-size: 15px; margin-top: 4px;">
             <span class="author-block"><sup>1</sup>Tsinghua University,</span>
-            <span class="author-block"><sup>2</sup>Galbot,</span>
+            <span class="author-block"><sup>2</sup>Galbot Inc.,</span>
             <span class="author-block"><sup>3</sup>Beijing Institute of Technology,</span>
             <span class="author-block"><sup>4</sup>Harbin Institute of Technology,</span>
             <span class="author-block"><sup>5</sup>Peking University,</span>
@@ -60,11 +57,14 @@
             <span class="author-block"><sup>*</sup>Equal contribution.&nbsp;&nbsp;<sup>&#9993;</sup>Corresponding author.</span>
           </div>
 
+          <div class="publication-venue" style="margin: 12px auto 0;">ECCV 2026</div>
+
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="#"
+                <a href="https://arxiv.org/pdf/2608.28693"
+                   target="_blank" rel="noopener noreferrer"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -74,7 +74,8 @@
               </span>
               <!-- arXiv Link. -->
               <span class="link-block">
-                <a href="#"
+                <a href="https://arxiv.org/abs/2608.28693"
+                   target="_blank" rel="noopener noreferrer"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -84,7 +85,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="#"
+                <a href="#overview-video"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -94,7 +95,8 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="#"
+                <a href="https://github.com/GalaxyGeneralRobotics/RoboGesture"
+                   target="_blank" rel="noopener noreferrer"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -126,44 +128,47 @@
 </section>
 
 
-<!-- Real-world videos: two columns -->
+<!-- Real-world interaction videos -->
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <div class="columns is-centered">
+      <div class="has-text-centered interaction-intro">
+        <h2 class="title is-3">Real-World Interaction</h2>
+        <p>Ten complete interaction clips across four everyday settings, generated and executed on a Unitree G1 humanoid.</p>
+      </div>
 
-        <!-- Co-Speech Gesture Generation column -->
-        <div class="column is-half">
-          <h3 class="title is-4 has-text-centered">Co-Speech Gesture Generation</h3>
-          <div class="content has-text-centered">
-            <video id="rw1" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 12px;">
-              <source src="./static/videos/cospeech_1.mp4" type="video/mp4">
-            </video>
-            <video id="rw2" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 12px;">
-              <source src="./static/videos/cospeech_2.mp4" type="video/mp4">
-            </video>
-            <video id="rw3" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/cospeech_3.mp4" type="video/mp4">
-            </video>
-          </div>
+      <div class="scenario-group">
+        <h3 class="title is-4">Social Assistance</h3>
+        <div class="columns is-multiline">
+          <div class="column is-half"><video controls playsinline preload="metadata"><source src="./static/videos/social_assistance_1.mp4" type="video/mp4"></video></div>
+          <div class="column is-half"><video controls playsinline preload="metadata"><source src="./static/videos/social_assistance_2.mp4" type="video/mp4"></video></div>
+          <div class="column is-half"><video controls playsinline preload="metadata"><source src="./static/videos/social_assistance_3.mp4" type="video/mp4"></video></div>
+          <div class="column is-half"><video controls playsinline preload="metadata"><source src="./static/videos/social_assistance_4.mp4" type="video/mp4"></video></div>
         </div>
+      </div>
 
-        <!-- Social Interaction column -->
-        <div class="column is-half">
-          <h3 class="title is-4 has-text-centered">Social Interaction</h3>
-          <div class="content has-text-centered">
-            <video id="rw4" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 12px;">
-              <source src="./static/videos/social_1.mp4" type="video/mp4">
-            </video>
-            <video id="rw5" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 12px;">
-              <source src="./static/videos/social_2.mp4" type="video/mp4">
-            </video>
-            <video id="rw6" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/social_3.mp4" type="video/mp4">
-            </video>
-          </div>
+      <div class="scenario-group">
+        <h3 class="title is-4">Emotional Support</h3>
+        <div class="columns is-multiline">
+          <div class="column is-half"><video controls playsinline preload="metadata"><source src="./static/videos/emotional_support_1.mp4" type="video/mp4"></video></div>
+          <div class="column is-half"><video controls playsinline preload="metadata"><source src="./static/videos/emotional_support_2.mp4" type="video/mp4"></video></div>
         </div>
+      </div>
 
+      <div class="scenario-group">
+        <h3 class="title is-4">Knowledge Sharing</h3>
+        <div class="columns is-multiline">
+          <div class="column is-half"><video controls playsinline preload="metadata"><source src="./static/videos/knowledge_sharing_1.mp4" type="video/mp4"></video></div>
+          <div class="column is-half"><video controls playsinline preload="metadata"><source src="./static/videos/knowledge_sharing_2.mp4" type="video/mp4"></video></div>
+        </div>
+      </div>
+
+      <div class="scenario-group">
+        <h3 class="title is-4">Workspace Communication</h3>
+        <div class="columns is-multiline">
+          <div class="column is-half"><video controls playsinline preload="metadata"><source src="./static/videos/workspace_communication_1.mp4" type="video/mp4"></video></div>
+          <div class="column is-half"><video controls playsinline preload="metadata"><source src="./static/videos/workspace_communication_2.mp4" type="video/mp4"></video></div>
+        </div>
       </div>
     </div>
   </div>
@@ -203,14 +208,29 @@
     </div>
     <!--/ Abstract. -->
 
+    <div class="columns is-mobile is-multiline is-centered research-highlights" aria-label="RoboGesture highlights">
+      <div class="column is-half-mobile is-one-quarter-tablet">
+        <div class="highlight-card"><strong>300+</strong><span>semantic gesture categories</span></div>
+      </div>
+      <div class="column is-half-mobile is-one-quarter-tablet">
+        <div class="highlight-card"><strong>1,000 h</strong><span>semantic training data</span></div>
+      </div>
+      <div class="column is-half-mobile is-one-quarter-tablet">
+        <div class="highlight-card"><strong>&asymp;120 FPS</strong><span>motion generation</span></div>
+      </div>
+      <div class="column is-half-mobile is-one-quarter-tablet">
+        <div class="highlight-card"><strong>5.6 ms</strong><span>safety filtering per frame</span></div>
+      </div>
+    </div>
+
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered" id="overview-video">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Overview Video</h2>
         <div class="publication-video">
-          <!-- TODO: Replace YOUTUBE_VIDEO_ID with the RoboGesture YouTube video id once uploaded. -->
-          <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <video controls playsinline preload="metadata" poster="./static/images/teaser.png">
+            <source src="./static/videos/robogesture_overview.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -273,9 +293,9 @@
             <b>Conditional Flow Matching</b> predicts the velocity field of future motion chunks for low-latency,
             high-fidelity streaming. To overcome the <b>modality eclipse</b> &mdash; where the model lazily relies on
             past kinematic inertia rather than audio &mdash; we adopt a two-stage training strategy with
-            <b>Anti-Inertia CFG Masking</b> that randomly masks historical context, compelling the model to
-            proactively mine control signals from audio. Inside the DiT, Cross-Attention provides frame-level
-            alignment while FiLM injects global semantic modulation.
+            <b>Anti-Inertia CFG Masking</b> that masks historical context with a <b>15% probability</b>, compelling
+            the model to proactively mine control signals from audio. Inside the DiT, Cross-Attention provides
+            frame-level alignment while FiLM injects global semantic modulation.
           </p>
         </div>
 
@@ -307,8 +327,9 @@
             optimized, then replayed on the physical robot to verify reachability and control fidelity.
           </p>
           <p>
-            Building on this, an <b>automatic semi-synthetic pipeline</b> generates millions of audio&ndash;motion
-            pairs through five stages: (1) <b>Scenario Generation</b> with LLMs, (2) <b>Gesture Tagging</b> to select
+            Building on this, an <b>automatic semi-synthetic pipeline</b> generates <b>1,000 hours</b> of
+            semantic-centric audio&ndash;motion training data through five stages: (1) <b>Scenario Generation</b>
+            with LLMs, (2) <b>Gesture Tagging</b> to select
             and place semantically appropriate gestures, (3) <b>Multimodal Synthesis</b> of emotion-aware TTS audio
             with word-level timestamps and rhythmic beat gestures, (4) <b>Temporal Blending</b> where semantic
             gestures begin 0.4s before their spoken keywords to mimic human anticipation, and (5) <b>Safety
@@ -344,7 +365,7 @@
         </div>
 
         <!-- Main quantitative table -->
-        <div class="content">
+        <div class="content table-container">
           <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth has-text-centered"
                  style="font-size: 13px;">
             <thead>
@@ -403,22 +424,6 @@
           patting the chest.
         </p>
 
-        <h3 class="title is-4">Simulation Comparison with Baselines</h3>
-        <div class="content has-text-justified">
-          <p>
-            Side-by-side comparisons of generated gestures highlight the superior semantic alignment, hand
-            articulation, and physical safety of our method against state-of-the-art baselines.
-          </p>
-        </div>
-        <div class="content has-text-centered" style="margin-bottom: 40px;">
-          <video id="sim1" autoplay controls muted loop playsinline width="48%" style="margin: 0 0.5%;">
-            <source src="./static/videos/compare_baseline_1.mp4" type="video/mp4">
-          </video>
-          <video id="sim2" autoplay controls muted loop playsinline width="48%" style="margin: 0 0.5%;">
-            <source src="./static/videos/compare_baseline_2.mp4" type="video/mp4">
-          </video>
-        </div>
-
         <h3 class="title is-4">Real-world Social Interaction</h3>
         <div class="content has-text-justified">
           <p>
@@ -426,8 +431,8 @@
             and gestures in real time. The deployed system comprises a language interaction module (ASR, a LoRA-tuned
             LLM, and TTS), our streaming speech-to-motion module, and a robot execution module. The streaming motion
             generator sustains <b>&asymp;120 FPS</b>, with total system latency dominated by the upstream speech
-            pipeline rather than our motion model. The carousel above shows real-world co-speech gesture generation
-            and social interaction on a Unitree G1 humanoid.
+            pipeline rather than our motion model. The four scenario galleries above show social assistance,
+            emotional support, knowledge sharing, and workspace communication on a Unitree G1 humanoid.
           </p>
         </div>
       </div>
@@ -455,9 +460,10 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <!-- TODO: link the PDF once the submission is de-anonymized. -->
       <span class="icon-link">
-        <i class="fas fa-file-pdf"></i>
+        <a href="https://arxiv.org/pdf/2608.28693" target="_blank" rel="noopener noreferrer" aria-label="RoboGesture paper PDF">
+          <i class="fas fa-file-pdf"></i>
+        </a>
       </span>
     </div>
     <div class="columns is-centered">
@@ -472,17 +478,6 @@
     </div>
   </div>
 </footer>
-
-
-<script>
-  // Match playback speed of supplementary / comparison videos as desired.
-  document.addEventListener('DOMContentLoaded', function () {
-    ['rw1','rw2','rw3','rw4','rw5','rw6','sim1','sim2'].forEach(function (id) {
-      var v = document.getElementById(id);
-      if (v) v.playbackRate = 1.0;
-    });
-  });
-</script>
 
 </body>
 </html>
